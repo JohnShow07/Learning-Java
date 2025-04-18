@@ -18,4 +18,14 @@ public class woche1Test {
         List<Double> erwartet = List.of(1.2, 2.5, 10.0, 3.1, 4.0, 5.6);
         assertEquals(erwartet.size(), 6);
     }
+
+    @Test
+    void testNumberWirdAddiert() {
+        List<Double> list = List.of(1.2, 2.5, 3.1, 4.0, 5.6);
+        List<Double> addedList = woche1.gibListeMitEingefügtemWert();
+
+        assertThrows(IndexOutOfBoundsException.class, () -> {
+            addedList.get(list.size() + 1);
+        });
+    }
 }
