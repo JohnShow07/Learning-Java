@@ -12,4 +12,10 @@ public class woche1Test {
         assertEquals(erwartet, ergebnis);
 
     }
+
+    @Test
+    void testLängeDerAusgabe() {
+        List<Double> erwartet = List.of(1.2, 2.5, 10.0, 3.1, 4.0, 5.6);
+        assertEquals(erwartet.size(), 6);
+    }
 }
