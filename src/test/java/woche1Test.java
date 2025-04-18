@@ -1,1 +1,3 @@
-cla
+public class woche1Test {
+
+}
