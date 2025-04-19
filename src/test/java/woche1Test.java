@@ -2,6 +2,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.List;
+import java.util.Queue;
 
 public class woche1Test {
 
@@ -27,5 +28,17 @@ public class woche1Test {
         assertThrows(IndexOutOfBoundsException.class, () -> {
             addedList.get(list.size() + 1);
         });
+    }
+
+    // Queue Test
+    @Test
+    void testQueueMethod() {
+        Queue<String> q = woche1.queueMethod();
+
+        assertEquals(3, q.size());
+        assertEquals("a", q.poll());
+        assertEquals("b", q.poll());
+        assertEquals("c", q.poll());
+        assertTrue(q.isEmpty());
     }
 }
